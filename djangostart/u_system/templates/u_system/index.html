@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <h1>所有用户</h1>
+            {% for user_email in email %}
+                <h2>{{ user_email }}</h2>
+            {% endfor %}
+        <h2>所有用户密码</h2>
+            {% for user_password in password %}
+                <h2>{{ user_password }}</h2>
+            {% endfor %}
+</body>
+</html>

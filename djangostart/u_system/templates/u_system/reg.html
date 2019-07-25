@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+{#    <link rel="stylesheet" href="/static/app1/css/regist.css">#}
+</head>
+<body>
+<div class="div1">
+    <form method="post" action="#">
+        {% csrf_token %}
+        <p>邮箱<input type="email" name="email" placeholder="请输入邮箱" class="input1"></p>
+{#        <p>手机号<input type="tel" name="telphone" placeholder="可用于登录和找回密码"></p>#}
+        <p>密码<input type="password" name="password" placeholder="请设置登录密码"></p>
+{#        <p class="p1">验证码<input type="text" name="checkcode" placeholder="请输入验证码" class="input4"></p>#}
+{#        <input type="button" value="获取短信验证码" class="input5"><br/>#}
+{#        <input type="checkbox" class="input6"><span class="span2">阅读并接受《<a href="#">百度用户协议</a>》及《<a href="#">百度隐私权保护声明</a>》</span><br/>#}
+        <button class="button1" type="submit">注册</button>
+    </form>
+</div>
+</body>
+</html>
