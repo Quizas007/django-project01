@@ -13,20 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
-from app01 import views
-from u_system import views
+from apps.app01 import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^demo01/', views.demo01),
-    # url(r'^demo_form/',views.demo_form),
-    # url(r'^demo_form_post/',views.demo_form_post),
-    # url(r'^demo_form_db/',views.demo_form_db),
+    url(r'^demo01/', views.demo01),
+    url(r'^demo_form/',views.demo_form),
+    url(r'^demo_form_post/',views.demo_form_post),
+    url(r'^demo_form_db/',views.demo_form_db),
 
-    # 用户注册登录系统
-    url(r'^index/$',views.index),
-    url(r'^login/$',views.login),
-    url(r'^reg/$',views.reg)
+    # 用户注册登录系统,
+    url(r'^u_system/',include('apps.u_system.urls',namespace="u_system")),
+
+    url(r'^route_base/',include('apps.route_base.urls',namespace="route_base")),
+    url(r'^route_resolve/',include('apps.route_resolve.urls',namespace="route_resolve")),
+    url(r'^django_templates/',include('apps.django_templates.urls',namespace="django_templates")),
 ]

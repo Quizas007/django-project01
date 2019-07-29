@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app01',
-    'u_system',
+    'apps.app01',
+    'apps.u_system',
+    'apps.route_base',
+    'apps.route_resolve',
+    'apps.django_templates',
 ]
 
 MIDDLEWARE = [
@@ -57,8 +60,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'app01/templates'),
-            os.path.join(BASE_DIR, 'u_system/templates'),
+            os.path.join(BASE_DIR, 'apps/app01/templates'),
+            os.path.join(BASE_DIR, 'apps/u_system/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -125,6 +128,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'app01/static'),
-    os.path.join(BASE_DIR, 'u_system/static'),
+    os.path.join(BASE_DIR, 'apps/app01/static'),
+    os.path.join(BASE_DIR, 'apps/u_system/static'),
+    os.path.join(BASE_DIR, 'apps/django_templates/static'),
 ]
