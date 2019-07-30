@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<h1>原始表单</h1>
+<form action="" method="post">
+	<p><label for="id_subject1">Subject:</label>
+	    <input id="id_subject1" type="text" name="subject" maxlength="100" required /></p>
+	<p><label for="id_message">Message:</label>
+	    <textarea name="message" id="id_message" required></textarea></p>
+	<p><label for="id_sender">Sender:</label>
+	    <input type="email" name="sender" id="id_sender" required /></p>
+	<p><label for="id_cc_myself">Cc myself:</label>
+	    <input type="checkbox" name="cc_myself" id="id_cc_myself" /></p>
+</form>
+<h2>django-form表单-as_table</h2>
+{{ form.as_p }}
+<input type="submit">
+<br>
+{#<h2>django-form表单-as_p</h2>#}
+{#{{ form.as_p }}#}
+{#<br>#}
+{#<h2>django-form表单-as_ul</h2>#}
+{#{{ form.as_ul }}#}
+{#<br>#}
+{#<h2>django-form表单-单个元素</h2>#}
+{#{{ form.subject.label }}：{{ form.subject }}#}
+</body>
+</html>
